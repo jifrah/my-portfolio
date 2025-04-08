@@ -1,0 +1,379 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #1D1D1F;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #1D1D1F;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #323233;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #323233;
+    margin-bottom: 12px;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Background colors */
+.bg-light {
+    background-color: #FCFCF9;
+}
+
+.bg-lighter {
+    background-color: #F5F5F7;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn-primary {
+    background-color: #050505;
+    color: #F8F8F8;
+    border: 1px solid #050505;
+}
+
+.btn-primary:hover {
+    color: #CFCFCF;
+}
+
+.btn-secondary {
+    background-color: #FCFCF9;
+    color: #050505;
+    border: 1px solid #030303;
+}
+
+.btn-secondary:hover {
+    background-color: #050505;
+    color: #FCFCF9;
+}
+
+/* Cards */
+.card {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgba(5, 5, 5, 0.1);
+}
+
+.bg-light .card {
+    background-color: #F5F5F7;
+}
+
+.bg-lighter .card {
+    background-color: #FCFCF9;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #050505;
+    color: #FCFCF9;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #FCFCF9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo:hover {
+    color: #F5F5F7;
+}
+
+/* Navigation */
+.nav-desktop {
+    display: none;
+}
+
+.nav-desktop ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-desktop li {
+    margin-left: 20px;
+}
+
+.nav-desktop a {
+    color: #FCFCF9;
+    text-decoration: none;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-desktop a:hover {
+    color: #F5F5F7;
+}
+
+.burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #FCFCF9;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+    top: 0px;
+}
+
+.burger span:nth-child(2),
+.burger span:nth-child(3) {
+    top: 9px;
+}
+
+.burger span:nth-child(4) {
+    top: 18px;
+}
+
+.burger.open span:nth-child(1),
+.burger.open span:nth-child(4) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+}
+
+.burger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.nav-mobile {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #050505;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.nav-mobile.open {
+    height: calc(100vh - 60px);
+}
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-mobile li {
+    margin-bottom: 20px;
+}
+
+.nav-mobile a {
+    color: #FCFCF9;
+    text-decoration: none;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-mobile a:hover {
+    color: #F5F5F7;
+}
+
+/* Home */
+#home {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+}
+
+/* About */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    line-height: 1.6;
+}
+
+/* Projects */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    margin-bottom: 30px;
+}
+
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-title {
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    margin-bottom: 15px;
+    color: #515154;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: #E5E5E5;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+.see-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Career Timeline */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #050505;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #050505;
+    border: 2px solid #050505;
+    border-radius: 50%;
+    top: 15px;
+    left: 13px;
+    z-index:
